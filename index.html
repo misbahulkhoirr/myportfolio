@@ -830,7 +830,21 @@
           <a id="tombolScrollTop" onclick="scrolltotop()"><img style="margin-left:4px;margin-top:2px;" width="25px" src="img/back-to-top-arrow-white.png"></a>
     </div>
   </div>
-  
+  <?php
+$name = $_POST['name'];
+$email= $_POST['email'];
+$message= $_POST['message'];
+$to = "dfilm325@mail.com";
+$subject = "Mail From website";
+$txt ="Name = ". $name . "\r\n  Email = " . $email . "\r\n Message =" . $message;
+$headers = "From: noreply@yoursite.com" . "\r\n" .
+"CC: noreply@example.com";
+if($email!=NULL){
+    mail($to,$subject,$txt,$headers);
+}
+//redirect
+header("Location:index.html");
+?>
   <footer class="footer">
     <div class="container">
         <nav class="pull-left">

@@ -906,8 +906,10 @@
       function sendMail() {    
     var body = document.getElementById("bodi").value;
     var subject = document.getElementById("subject").value;
+        
+        location.href="mailto:misbahulkhoir097@gmail.com?body=${body}&subject=${subject}";
 
-    window.location.replace(`mailto:misbahulkhoir097@gmail.com?body=${body}&subject=${subject} wants to contact you`);    
+//     window.location.replace(`mailto:misbahulkhoir097@gmail.com?body=${body}&subject=${subject} wants to contact you`);    
 }
       </script
 </html>

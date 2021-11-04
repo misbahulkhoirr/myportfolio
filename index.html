@@ -824,7 +824,7 @@
                     <input type="hidden" name="error_url" value=".myportfolio?message=Email+could+not+be+sent.&isError=1" />
     
                     <input id="submit_form" type="submit" value="Send" style="background-color:#3c8dbc;" class="btn btn-raised"/>
-                    <div class="alert"></div>
+                    
                     <div class="alert alert-success">Email Successfully Sent!</div>
                 </form>
                 </div>
@@ -918,6 +918,36 @@
         }, 1);
     });
 </script> 
+<script type="text/javascript">
+            var urlParams;
+            (window.onpopstate = function () {
+                var match,
+                        pl     = /\+/g,  // Regex for replacing addition symbol with a space
+                        search = /([^&=]+)=?([^&]*)/g,
+                        decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
+                        query  = window.location.search.substring(1);
+
+                urlParams = {};
+                while (match = search.exec(query))
+                    urlParams[decode(match[1])] = decode(match[2]);
+            })();
+
+            $(function () {
+                $('#tabs').tab();
+
+                if(urlParams['message']) {
+                    console.log(urlParams["iserror"]);
+                    if(urlParams["isError"] === "1") {
+                        $(".alert").addClass("alert-danger");
+                    } else {
+                        $(".alert").addClass("alert-success");
+                    }
+
+                    var message = urlParams['message'];
+                    $(".alert").text(message);
+                }
+            });
+    </script>
 
    
 </html>

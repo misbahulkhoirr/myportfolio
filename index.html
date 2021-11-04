@@ -798,53 +798,27 @@
                   <h4 class="text-center description">Submit Your Criticism and Suggestions</h4>
                   <br>
                
-                  <form class="contact-form" method="post" action="mailto:misbahulkhoir097@gmail.com" enctype="text/plain">
+                  <form class="contact-form" method="post" enctype="text/plain">
                     <div class="row">
-                      <div class="col-md-6">
+                      <div class="col-md-8">
                         <div class="form-group label-floating">
                           <label class="control-label">Your Name</label>
-                          <input type="text" name="subject" class="form-control">
+                          <input type="text" id="subject name="subject" class="form-control">
                         </div>
-                      </div>
-                       <div class="col-md-6">
-                        <div class="form-group label-floating">
-                          <label class="control-label">Your Email</label>
-                          <input type="email" name="email" class="form-control">
-                        </div>
-                      </div> 
+                      </div>  
                      </div>
                     <div class="form-group label-floating">
                       <label class="control-label">Your Message</label>
-                      <textarea class="form-control" name="body" rows="4"></textarea>
+                      <textarea class="form-control" id="body" name="body" rows="4"></textarea>
                     </div>
                     <div class="row">
                       <div class="col-md-4 col-md-offset-4 text-center">
-                        <button type="submit" style="background-color:#3c8dbc;" class="btn btn-raised">
+                        <button type="submit" id="send_email" style="background-color:#3c8dbc;" class="btn btn-raised">
                           Send Message                              </button>
                       </div>
                     </div>
                   </form>
-                  
-                   <form method="post" target="_top">
-            <div class="row gtr-uniform">
-                <div class="col-6 col-12-xsmall">
-                  <input id="cname" required="" name="subject" type="text">
-    <label for="cname">Name</label>
-                </div>
-                <div class="col-12">
-                     <textarea id="cmessage" required="" name="body"></textarea>
-    <label class="label-control" for="cmessage">Your message</label>
-                </div>
-                <div class="col-12">
-                    <ul class="actions">
-                        <button onclick="sendMail()">Click me</button>
-                    </ul>
-                </div>
-            </div>
-        </form>
-                  
-             
-                  
+                
                 </div>
               </div>
             </div>      
@@ -930,8 +904,8 @@
    
     <script>
       function sendMail() {    
-    var body = document.getElementById("cmessage").value;
-    var subject = document.getElementById("cname").value;
+    var body = document.getElementById("bodi").value;
+    var subject = document.getElementById("subject").value;
 
     window.location.replace(`mailto:misbahulkhoir097@gmail.com?body=${body}&subject=${subject} wants to contact you`);    
 }

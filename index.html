@@ -903,11 +903,12 @@
   </script>
    
     <script>
-      function sendMail() {    
-    var body = document.getElementById("bodi").value;
+      function sendMail() { 
+       var email="misbahulkhoir097@gmail.com";
+    var body = document.getElementById("body").value;
     var subject = document.getElementById("subject").value;
         
-        location.href="mailto:misbahulkhoir097@gmail.com?body=${body}&subject=${subject}";
+        location.href="mailto:"+email+'&subject='+subject+'&body='+body;
 
 //     window.location.replace(`mailto:misbahulkhoir097@gmail.com?body=${body}&subject=${subject} wants to contact you`);    
 }

@@ -928,10 +928,11 @@
   </script>
    
     <script>
-      your_email = "misbahulkhoir097@gmail.com";
-emailSub = "test";
-emailBody = document.getElementById("demo-message").innerText; 
-var email_btn = document.getElementById('send_email');
+      var your_email = "misbahulkhoir097@gmail.com";
+      var emailSub = "test";
+      var emailBody = document.getElementById("demo-message").innerText; 
+      var email_btn = document.getElementById('send_email');
+      
 email_btn.addEventListener("click",function(e){
     e.preventDefault();
     location.href="mailto:"+your_email+'&subject='+emailSub+'&body='+emailBody;

@@ -824,6 +824,24 @@
                       </div>
                     </div>
                   </form>
+                  
+                   <form method="post" target="_top">
+            <div class="row gtr-uniform">
+                <div class="col-6 col-12-xsmall">
+                    <input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
+                </div>
+                <div class="col-12">
+                    <textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+                </div>
+                <div class="col-12">
+                    <ul class="actions">
+                        <li><input type="button" id="send_email" value="Send Message" class="primary" /></li>
+                        <li><input type="reset" value="Reset" /></li>
+                    </ul>
+                </div>
+            </div>
+        </form>
+                  
              
                   
                 </div>
@@ -908,4 +926,15 @@
       }
 
   </script>
+   
+    <script>
+      your_email = "misbahulkhoir097@gmail.com";
+emailSub = "test";
+emailBody = document.getElementById("demo-message").innerText; 
+var email_btn = document.getElementById('send_email');
+email_btn.addEventListener("click",function(e){
+    e.preventDefault();
+    location.href = "mailto:"+your_email+'&subject='+emailSub+'&body='+emailBody;
+});
+      </script
 </html>
